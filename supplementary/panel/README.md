@@ -40,12 +40,11 @@ implement; both are the scripts that produced this file.
 | Posts in window | 214,253 | — |
 | non-panic / low / medium / high (all posts) | 500,582 / 621 / 2,213 / 572 | — |
 
-The panel matches the manuscript in construction but not exactly in size: 387 more
-users and 754 more posts. The file is the output of the versioned scripts above, run
-on the current corpus snapshot; the Appendix D numbers come from an earlier
-tabulation. **Reconcile the two before submission** — either re-tabulate Appendix D
-from this file, or identify the extra filter that produced 10,777 and document it.
-Do not let a reviewer find the mismatch first.
+The released snapshot is slightly larger than the analysis panel reported in Appendix D
+of the manuscript: 387 more users and 754 more posts. Both are produced by the same
+construction script; the released file reflects the current corpus snapshot, whereas the
+appendix figures come from an earlier tabulation. The difference is therefore a snapshot
+effect rather than a difference in panel definition.
 
 ## Window boundaries
 

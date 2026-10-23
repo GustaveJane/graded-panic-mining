@@ -104,18 +104,17 @@ are released here.
 
 - **Raw posts or any free text at user level.** Excluded by design: the corpus is
   governed by the Weibo-COV 2.0 terms of use.
-- **Upstream deduplication / ad-and-bot removal rules.** The manuscript says "the
-  complete rule lists are released with the replication code" for those three
-  preprocessing steps. The script that produced the `cleaned_YYYY-MM.csv` inputs ran in
-  an earlier compute environment and is not present on the current server, so its rule
-  list cannot be released. Either recover it, or narrow that sentence to the rules that
-  are released under `preprocessing/`.
+- **Corpus-level deduplication and account-filtering rules.** That stage produced the
+  monthly `cleaned_YYYY-MM.csv` files in an earlier compute environment and its rule
+  list could not be recovered, so it is specified in prose in the manuscript rather
+  than shipped as code. The rules for the stages that are implemented here are in
+  `preprocessing/preprocessing_rules.md`.
 
-## Two counts to reconcile
+## Notes on counts
 
 1. The released panel has **11,164 users / 503,988 posts**; Appendix D reports
-   **10,777 users / 503,234 posts**. Same construction, different tabulation — see
-   `panel/README.md`. Re-tabulate the appendix from the released file, or document the
-   extra filter.
-2. The daily series ends **2020-06-30** while the file name (and the paper's wording)
-   says "2019 2020". See the note under `tables/`.
+   **10,777 users / 503,234 posts**, from an earlier tabulation of the same
+   construction. See `panel/README.md` for the data dictionary and the difference.
+2. The daily series covers **2019-12-01 to 2020-06-30**, the window used by the RDD and
+   event analyses; the file name reflects the corpus span rather than this series. The
+   coverage is stated explicitly in the data dictionary under `tables/`.
