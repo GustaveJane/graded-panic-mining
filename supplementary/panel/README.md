@@ -35,6 +35,11 @@ the file. This reproduces the appendix exactly:
 | Users with epidemic posts in both periods | **98.93%** | 98.93% |
 | Tier counts (non-panic / low / medium / high) | 498,768 / 635 / 3,051 / 780 | — |
 
+The 98.93% figure uses all 10,777 users as the denominator (10,662 users post epidemic
+content in both periods; 18 users have no epidemic post at all). Computed only over
+users who post epidemic content, the share is 99.10% — the same quantity with the 18
+users excluded, so quote whichever denominator the sentence uses.
+
 ## What this file cannot reproduce
 
 Table 13 splits the epidemic posts into `A / B / C / D / N`. Those labels are **not**
