@@ -1,0 +1,63 @@
+# Data availability
+
+## What is (and is not) in this repository
+
+| Item | Included? | Notes |
+|---|---|---|
+| Analysis code | ✅ Yes | `src/` |
+| Configuration templates | ✅ Yes | `config/config.yaml` |
+| Figures / tables produced by the code | ⏳ Not yet | Generated locally; added with the camera-ready version |
+| Raw Weibo posts | ❌ **No** | Licence prohibits redistribution |
+| User identifiers | ❌ **No** | Removed at source |
+| Per-document `panic_prob` scores | ❌ **No** | Derived from the licensed corpus |
+| Trained model weights | ❌ **No** | Obtainable by running Stage 2 |
+
+## Source corpus
+
+The study uses **Weibo-COV 2.0**, a publicly released COVID-19 Weibo corpus covering December 2019 – December 2020 (65,175,112 posts in the version used here). Access is granted by the corpus maintainers under their own terms of use. Please refer to the dataset's official release page and the reference cited in the paper:
+
+> Weibo-COV 2.0 — see reference [23] of the paper.
+
+Requests should be addressed to the dataset maintainers, not to the authors of this repository. We cannot redistribute the corpus, in whole or in part, including de-identified subsets.
+
+## Schema expected by the pipeline
+
+The code expects **one row per post** in CSV or Parquet, with at least:
+
+| Column | Type | Meaning |
+|---|---|---|
+| `created_at` | datetime / `YYYY-MM-DD HH:MM` | Posting time |
+| `covid_related` | 0/1 | COVID-relevance flag (Stage 1 output) |
+| `panic_prob` | float ∈ [0,1] | PanicBERT posterior (Stage 2 output) |
+| `content_nature` | `A`/`B`/`C`/`D`/`N` | L1 content class (Stage 2 annotation) |
+| `panic_type` | `P1`–`P8` or empty | L3 panic appeal, class-A only |
+| `user_id` | string | **Hashed** pseudonym; never a raw Weibo UID |
+
+If your copy uses different names, map them in `config/config.yaml` under `columns:`.
+
+## Pointing the code at your data
+
+```yaml
+# config/config.yaml
+paths:
+  raw_data_dir: "/path/to/your/weibo-corpus"
+columns:
+  time: created_at
+  covid_flag: covid_related
+  panic_prob: panic_prob
+  content_nature: content_nature
+```
+
+## Reproducibility statement
+
+Every number in the paper can be regenerated from the corpus with the commands in [`reproduction.md`](reproduction.md). Because the corpus itself cannot be redistributed, full bit-for-bit reproduction requires obtaining the same corpus release; the code, seeds and configuration are fixed, and all random procedures use explicit seeds.
+
+## Privacy
+
+The pipeline treats post text as sensitive. Do not commit:
+
+- raw post text,
+- user identifiers (even hashed ones, if the hash is reversible),
+- any file derived from the corpus that preserves row-level text.
+
+`.gitignore` blocks `data/`, `*.csv` at the repository root and all per-post dumps by default.

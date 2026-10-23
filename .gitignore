@@ -1,0 +1,119 @@
+﻿# ===================== Python =====================
+__pycache__/
+*.py[cod]
+*.class
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Data (tracked by DVC)
+data/raw/
+data/processed/
+data/features/
+data/external/
+
+# Large root CSV files (track by DVC)
+*.csv
+!src/**/*.csv
+!config/**/*.csv
+!paper/tables/*.csv
+!experiments/results/**/*.csv
+!reports/**/*.csv
+!labels/**/*.csv
+!references/*.csv
+
+# Model weights
+*.pth
+*.bin
+*.pt
+*.safetensors
+*.pkl
+models/
+
+# DVC
+.dvc/
+
+# Generated scripts
+_gen*.py
+
+# Simulation outputs (track by DVC)
+data/simulation/outputs/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# ===================== SSCM repo hardening (2026-10-23) =====================
+# 大体积目录（模型权重 / 原始语料 / 中间产物），绝不入库
+bert-base-chinese/
+raw_data_utf8/
+# 必须锚定到仓库根：未锚定的 `data/` 会一并忽略 src/data/，曾导致 4 个源码文件漏入库
+/data/
+results/
+result/
+paper_figures_server/
+paper_figures_unified/
+paper_pdf_check_*/
+topic_outputs/
+labeled_results/
+标注包_构念效度/
+
+# 原始分析目录：核心脚本已整理复制至 src/，原目录仅本地保留，避免重复入库
+RDD口径统一/
+rdd_holiday/
+label_noise_sensitivity/
+GMM补充分析/
+xinfadi_replication/
+ablation_tier_ipw/
+cognitive_proxy/
+topic_model/
+
+# 一次性脚本、归档与中间产物
+scripts/_archive/
+_inbox_*/
+*.xlsx
+*.bak
+*.bak_*
+*_output.txt
+
+
+# 论文与插图：等录用后再加入（2026-10-23）
+paper/
+
+# 本地 git 备份（含完整历史，绝不入库）
+.git_backup*/
+
+# 论文图片汇总（等录用后再放）
+论文图片_汇总_*/
+
+# 内部工作材料（周报 / 审稿意见 / 核对记录 / 决策文档），不公开
+周报/
+reports/
+论文核对/
+代码/
+仓库整理方案_待裁决.md
+
+# LaTeX 论文源与片段，不公开
+*.tex
+
+# 论文 LaTeX 片段（bibitem / section / table），不属于代码
+scripts/legacy/*.txt
+
+# dvc 骨架：已从仓库移除但保留本地文件（2026-10-23）
+dvc.yaml
+.dvcignore

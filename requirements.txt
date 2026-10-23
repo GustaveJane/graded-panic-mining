@@ -1,0 +1,27 @@
+# ============================================================
+# SSCM — Stratification–Semantics Coupled Mining framework
+# Tested on Python 3.12
+# ============================================================
+
+# ---- Core scientific stack ----
+numpy>=1.26
+pandas>=2.2
+scipy>=1.14
+scikit-learn>=1.5
+statsmodels>=0.14          # HAC / Newey-West standard errors, WLS
+matplotlib>=3.9
+
+# ---- Deep learning (Stage 2: PanicBERT) ----
+torch>=2.0
+transformers>=4.40
+
+# ---- Topic modelling (Stage 3b: BERTopic + HDBSCAN) ----
+bertopic>=0.16
+sentence-transformers>=2.7
+hdbscan>=0.8.33
+umap-learn>=0.5
+
+# ---- Config & I/O ----
+pyyaml>=6.0
+openpyxl>=3.1              # legacy .xlsx inputs
+tqdm>=4.66
