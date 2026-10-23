@@ -40,11 +40,13 @@ implement; both are the scripts that produced this file.
 | Posts in window | 214,253 | — |
 | non-panic / low / medium / high (all posts) | 500,582 / 621 / 2,213 / 572 | — |
 
-The released snapshot is slightly larger than the analysis panel reported in Appendix D
-of the manuscript: 387 more users and 754 more posts. Both are produced by the same
-construction script; the released file reflects the current corpus snapshot, whereas the
-appendix figures come from an earlier tabulation. The difference is therefore a snapshot
-effect rather than a difference in panel definition.
+The released snapshot is not the same user set as the analysis panel of Appendix D. The
+appendix describes an inclusion rule of at least 5 posts before 23 January and at least
+3 after; the file released here uses the rule implemented by the two scripts above
+(≥10 posts inside the five windows and ≥1 baseline post). Both draw on the same corpus,
+but they are different panels, which is why the counts differ (11,164 vs 10,777 users).
+The appendix figures were computed on its own panel and are not reproducible from this
+file without re-running the labelling stage.
 
 ## Window boundaries
 

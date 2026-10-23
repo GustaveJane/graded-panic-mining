@@ -112,9 +112,11 @@ are released here.
 
 ## Notes on counts
 
-1. The released panel has **11,164 users / 503,988 posts**; Appendix D reports
-   **10,777 users / 503,234 posts**, from an earlier tabulation of the same
-   construction. See `panel/README.md` for the data dictionary and the difference.
+1. The released panel has **11,164 users / 503,988 posts**. It is not the same user set
+   as the analysis panel of Appendix D (**10,777 users / 503,234 posts**): the appendix
+   uses an inclusion rule of ≥5 posts before 23 January and ≥3 after, while the released
+   file follows the two scripts under `../src/panel/` (≥10 posts inside the five windows,
+   ≥1 baseline post). See `panel/README.md`.
 2. The daily series covers **2019-12-01 to 2020-06-30**, the window used by the RDD and
    event analyses; the file name reflects the corpus span rather than this series. The
    coverage is stated explicitly in the data dictionary under `tables/`.
