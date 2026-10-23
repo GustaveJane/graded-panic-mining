@@ -12,7 +12,7 @@
 | **GMM stratification result tables** | ✅ Yes | `supplementary/tables/gmm_*.csv` |
 | **Daily aggregate panic series** | ✅ Yes | `supplementary/tables/daily_covid_panic_2019_2020.csv` (2019-12-01 → 2020-06-30) |
 | **Anchor-event response table** | ✅ Yes | `supplementary/tables/event_response_table.csv` |
-| **Stratified user panel** | ✅ Yes | `supplementary/panel/user_tier_panel_5windows.csv.gz` — 503,988 posts / 11,164 users, pseudonymised ids, five-window labels |
+| **Stratified user panel** | ✅ Yes | `supplementary/panel/user_panel_5windows.csv.gz` — 503,234 posts / 10,777 users, pseudonymised ids, tier + window + pre/post labels |
 | Figures produced by the code | ⏳ Not yet | Generated locally; added with the camera-ready version |
 | Raw Weibo posts | ❌ **No** | Licence prohibits redistribution |
 | User identifiers | ❌ **No** | Removed at source; the panel carries opaque 16-hex pseudonyms only |
