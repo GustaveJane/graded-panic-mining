@@ -117,3 +117,7 @@ scripts/legacy/*.txt
 # dvc 骨架：已从仓库移除但保留本地文件（2026-10-23）
 dvc.yaml
 .dvcignore
+
+# 论文承诺的补充材料（表格为公开的聚合结果，非原始语料）
+!supplementary/**/*.csv
+!supplementary/**/*.tsv

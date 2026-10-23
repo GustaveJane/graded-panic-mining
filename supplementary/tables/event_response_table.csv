@@ -1,0 +1,12 @@
+ID,date,event,baseline_pct,delta_pp,z_rate,z_volume,paper_baseline_pct,paper_delta_pp,paper_z_rate,note
+E1,2019-12-31,First official notice of unknown pneumonia,,,,,,,,insufficient baseline
+E2,2020-01-20,Human-to-human transmission confirmed,2.68,1.4,0.82,233.73,2.63,1.46,0.84,
+E3,2020-01-23,Wuhan lockdown announced,2.62,-1.1,-0.7,30.84,2.66,-1.13,-0.7,
+E4,2020-01-27,Spring Festival holiday extended,2.76,-1.66,-0.92,1.96,2.81,-1.7,-0.94,
+E5,2020-02-07,Death of Dr. Li Wenliang; hospital crisis peak,2.16,-1.11,-0.77,0.63,2.17,-1.12,-0.78,
+E6,2020-03-24,Hubei reopening announcement,1.19,-0.43,-1.0,-0.0,1.23,-0.47,-1.08,
+E7,2020-04-04,National mourning day,1.02,-0.45,-1.13,10.51,1.06,-0.49,-1.16,
+E8,2020-04-08,Wuhan reopening,0.87,-0.25,-0.95,0.03,0.88,-0.26,-0.97,
+E9,2020-05-10,Shulan cluster outbreak (Jilin),0.72,0.16,0.69,-1.58,0.73,0.14,0.6,
+E10,2020-05-21,Two Sessions convene,0.73,-0.22,-0.9,-1.06,0.74,-0.23,-0.92,
+E11,2020-06-11,Beijing Xinfadi outbreak,0.65,1.71,11.71,-0.09,0.65,1.71,11.74,
